@@ -1,0 +1,20 @@
+.header {
+  /*layout*/
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /*dimension*/
+  width: 100%;
+  padding: 20px;
+  /*style*/
+  background-color: #03314b;
+  font-size: 30px;
+}
+
+.position {
+  /*layout*/
+  position: absolute;
+  top: 4px;
+  right: 11px;
+  z-index: 10;
+}
