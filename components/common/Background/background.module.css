@@ -1,0 +1,9 @@
+.body {
+  /*layout*/
+  box-sizing: content-box;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  /*dimension*/
+  width: 100%;
+}
