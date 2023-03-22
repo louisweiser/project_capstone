@@ -1,0 +1,16 @@
+.list {
+  /*dimension*/
+  margin: 10px;
+  /*style*/
+  font-size: 18px;
+  list-style: none;
+}
+
+.listitem {
+  /*layout*/
+  display: flex;
+  /*dimension*/
+  padding: 5px;
+  /*style*/
+  border-bottom: 1px solid;
+}
