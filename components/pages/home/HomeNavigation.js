@@ -29,7 +29,7 @@ export default function HomeNavigation() {
 
   return (
     <div className={styles.navigation}>
-      <Link href={""}>
+      <Link href={"./home/wishlist"}>
         <div className={styles.positionrelative}>
           <p className={styles.textleft}>Wishlist</p>
           <Image
@@ -41,7 +41,7 @@ export default function HomeNavigation() {
           ></Image>
         </div>
       </Link>
-      <Link href={""}>
+      <Link href={"./home/dictonary"}>
         <div className={styles.positionrelative}>
           <p className={styles.textcenter}>Dictonary</p>
           <Image
