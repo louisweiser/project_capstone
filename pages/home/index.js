@@ -1,4 +1,4 @@
-import Background from "@/components/common/Background/index.js";
+import Background from "@/components/common/Background/beige.js";
 import Header from "@/components/common/Heading/Home.js";
 import DailyQuotes from "@/components/pages/home/DailyQuote.js";
 

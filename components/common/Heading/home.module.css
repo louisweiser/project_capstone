@@ -2,19 +2,16 @@
   /*layout*/
   display: flex;
   justify-content: center;
-  position: relative;
+  position: fixed;
+  top: 0;
   /*dimension*/
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
   /*style*/
-  background-color: #03314b;
+  background: #03314b;
   font-size: 30px;
 }
 
-.position {
-  /*layout*/
-  position: absolute;
-  top: 4px;
-  right: 11px;
-  z-index: 10;
+.font {
+  font-family: "Fasthand";
 }

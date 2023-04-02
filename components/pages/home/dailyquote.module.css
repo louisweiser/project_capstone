@@ -1,17 +1,17 @@
 .display {
   /*layout*/
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
   /*dimension*/
   width: auto;
   height: 30vh;
-  margin: 50px 20px 70px 20px;
+  margin: 145px 5px 0px 5px;
   padding: 20px;
   /*style*/
   background-color: #03314b;
-  border-radius: 10px;
-  border: #032330 solid 3px;
+  border-top: #032330 solid 2px;
+  border-bottom: #032330 solid 2px;
   font-size: 17px;
 }
