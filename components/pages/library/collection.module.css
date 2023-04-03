@@ -1,0 +1,31 @@
+.bookitem {
+  /*dimension*/
+  margin-right: 10px;
+}
+
+.category {
+  /*layout*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*dimension*/
+  padding: 5px 15px 0px 15px;
+  /*style*/
+  font-size: 18px;
+}
+.categorytext {
+  /*layout*/
+  display: inline-block;
+}
+
+.collection {
+  /*layout*/
+  display: flex;
+  list-style: none;
+  overflow-x: scroll;
+  white-space: nowrap;
+  /*dimension*/
+  padding: 7px 0;
+  margin-left: 10px;
+}
