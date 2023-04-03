@@ -43,11 +43,3 @@ export const DataProvider = ({ children }) => {
     </DataContext.Provider>
   );
 };
-
-/* ---------------- implementation ----------------
-import { useContext } from "react";
-import { DataContext } from "@/contexts/dataContext.js";
-
-const { bookData } = useContext(DataContext);
-
-*/
