@@ -10,8 +10,8 @@ import { DataContext } from "@/contexts/dataContext.js";
 import styles from "./collection.module.css";
 
 export default function CollectionFromData() {
-  const { bookData } = useContext(DataContext); //Metadaten
-  const [isLoading, setIsLoading] = useState(true); //Fehlerbehandlung
+  const { bookData } = useContext(DataContext);
+  const [isLoading, setIsLoading] = useState(true);
 
   const FilterData = (array, key, value) => {
     return array.filter((item) => item[key] === value);
