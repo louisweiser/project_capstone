@@ -28,53 +28,42 @@ const SlideDown = keyframes`
 `;
 
 const StyledSearchbarContainer = styled.div`
-  /*layout*/
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 5;
-  /*dimension*/
   height: 62px;
   width: 100vw;
-  /*style*/
   background-color: #032330;
 `;
 
 const StyledSearchInputFieldContainer = styled.div`
-  /*layout*/
   display: flex;
   justify-content: center;
   align-items: center;
-  /*dimension*/
   height: ${({ searchIsActive }) => (searchIsActive ? "52px" : "47px")};
   width: ${({ searchIsActive }) =>
     searchIsActive ? "100vw" : "calc(100vw - 15px)"};
   gap: 10px;
-  /*style*/
   background-color: #03314b;
   border-radius: ${({ searchIsActive }) => (searchIsActive ? "0" : "5px")};
 `;
 
 const StyledSearchInputField = styled.input`
-  /*layout*/
   width: calc(100vw - 45px);
   height: 37px;
-  /*style*/
   border: none;
   background: none;
   outline: none;
 `;
 
 const StyledResultFieldContainer = styled.div`
-  /*layout*/
   position: fixed;
   top: -100%;
   left: 0;
-  /*dimension*/
   width: 100%;
   height: calc(100vh - 37px);
-  /*style*/
   background-color: #03314b;
   animation: ${({ initialHide, searchIsActive }) =>
       initialHide ? "none" : searchIsActive ? SlideDown : SlideUp}
@@ -83,30 +72,24 @@ const StyledResultFieldContainer = styled.div`
 `;
 
 const StyledList = styled.ul`
-  /*layout*/
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  /*dimension*/
   height: calc(100vh - 57px);
 `;
 
 const StyledListItem = styled.li`
-  /*layout*/
   display: flex;
   flex-direction: row;
-  /*dimension*/
   margin: 20px 10px 0 10px;
 `;
 
 const StyledBookInfoContainer = styled.div`
-  /*layout*/
   display: flex;
   flex-direction: column;
   white-space: nowrap;
   overflow: hidden;
-  flex-grow: 1; // Erlaubt dem StyledBookInfoContainer, verfügbaren Platz zu nutzen
-  /*dimension*/
+  flex-grow: 1;
   margin-left: 8px;
 `;
 

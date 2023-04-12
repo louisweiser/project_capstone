@@ -8,34 +8,28 @@ import { genreData } from "@/public/data/genre.js";
 import { DataContext } from "@/contexts/dataContext.js";
 
 const StyledHeadlineContainer = styled.div`
-  /*layout*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /*dimension*/
   padding: 5px 15px 0px 15px;
   font-size: 18px;
 `;
 
 const StyledHeadline = styled.h3`
-  /*layout*/
   display: inline-block;
 `;
 
 const StyledList = styled.ul`
-  /*layout*/
   display: flex;
   list-style: none;
   overflow-x: scroll;
   white-space: nowrap;
-  /*dimension*/
   padding: 7px 0;
   margin-left: 10px;
 `;
 
 const StyledListItem = styled.li`
-  /*dimension*/
   margin-right: 10px;
 `;
 

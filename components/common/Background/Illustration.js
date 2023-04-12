@@ -6,12 +6,10 @@ import { MyContext } from "@/contexts/myContext.js";
 import { BackgroundSVG } from "@/public/svgs/background.js";
 
 const StyledContainer = styled.div`
-  /*layout*/
   box-sizing: content-box;
   position: fixed;
   top: 0;
   z-index: -1;
-  /*dimension*/
   width: 100%;
 `;
 

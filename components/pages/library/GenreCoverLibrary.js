@@ -9,11 +9,9 @@ import { DataContext } from "@/contexts/dataContext.js";
 import { MyContext } from "@/contexts/myContext.js";
 
 const StyledList = styled.ul`
-  /*layout*/
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /*dimension*/
   padding: 7.5px;
   width: 100vw;
   gap: 5px;
@@ -45,7 +43,7 @@ export default function GenreCoverLibrary() {
         );
         if (height < 0) {
           height = 0;
-        } //error handling
+        }
         heightArray.push(height);
         heightArray.push(height);
       } else {
@@ -54,7 +52,7 @@ export default function GenreCoverLibrary() {
         );
         if (height < 0) {
           height = 0;
-        } //error handling
+        }
         heightArray.push(height);
       }
     }

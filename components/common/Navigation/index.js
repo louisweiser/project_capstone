@@ -14,52 +14,41 @@ import {
 } from "@/public/svgs/navigationbar.js";
 
 const StyledNavigation = styled.nav`
-  /*layout*/
   position: fixed;
   bottom: 0;
-  /*dimension*/
   width: 100%;
   height: 53px;
-  /*style*/
   background-color: #03314b;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 `;
 
 const StyledList = styled.ul`
-  /*layout*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*dimension*/
   margin: 0 30px;
   padding: 0;
   height: 100%;
-  /*style*/
   list-style: none;
 `;
 
 const StyledListItem = styled.li`
-  /*layout*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*dimension*/
   margin-top: 5px;
   width: 45px;
   height: 40px;
-  /*style*/
   cursor: pointer;
 
   &:active {
-    /*style*/
     transform: scale(0.9);
   }
 `;
 
 const StyledText = styled.h5`
-  /*layout*/
   text-align: center;
 `;
 

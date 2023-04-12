@@ -11,10 +11,8 @@ import CoverFromData from "@/components/common/Cover/BookCover.js";
 import { DataContext } from "@/contexts/dataContext.js";
 
 const StyledContainer = styled.div`
-  /*layout*/
   display: flex;
   flex-direction: column;
-  /*dimension*/
   margin-top: 290px;
   padding: 100px 10px 10px 10px;
   gap: 10px;
@@ -24,11 +22,9 @@ const StyledContainer = styled.div`
 `;
 
 const StyledCoverContainer = styled.div`
-  /*layout*/
   display: flex;
   align-items: center;
   justify-content: center;
-  /*dimension*/
   width: calc(100vw - 40px);
   margin-top: 20px;
   margin-left: 10px;
@@ -37,14 +33,11 @@ const StyledCoverContainer = styled.div`
 `;
 
 const StyledButtonContainer = styled.div`
-  /*layout*/
   display: flex;
   justify-content: center;
-  /*dimension*/
   width: calc(100vw - 20px);
   padding: 20px 5px;
   gap: 10px;
-  /*style*/
   border-top: 2px solid white;
   border-bottom: 2px solid white;
 `;
@@ -85,7 +78,6 @@ export default function BookDetails({ serverBook, serverContent }) {
 
   const { bookData, contentData } = useContext(DataContext);
   const { screenWidth } = useContext(MyContext);
-  const { edit } = useContext(MyContext);
 
   const [book, setBook] = useState(null);
   const [bookContent, setBookContent] = useState(null);
@@ -113,7 +105,6 @@ export default function BookDetails({ serverBook, serverContent }) {
     }
   }, [bookData, contentData, router.query.slug, serverBook, serverContent]);
 
-  // Zeige einen Ladezustand an, wenn das Buch noch nicht vorhanden ist
   if (!book || !bookContent) {
     return <div>Loading...</div>;
   }
@@ -140,7 +131,6 @@ export default function BookDetails({ serverBook, serverContent }) {
 
   function renderSummary() {
     if (!summaryArray) {
-      // Story wurde nicht gefunden oder ist noch nicht geladen
       return null;
     }
 
@@ -160,7 +150,6 @@ export default function BookDetails({ serverBook, serverContent }) {
     return (
       <>
         <h3>Summary:</h3>
-
         <div>{renderedSummary}</div>
       </>
     );
@@ -168,7 +157,6 @@ export default function BookDetails({ serverBook, serverContent }) {
 
   function renderStories() {
     if (!storiesArray) {
-      // Story wurde nicht gefunden oder ist noch nicht geladen
       return null;
     }
 
@@ -195,9 +183,7 @@ export default function BookDetails({ serverBook, serverContent }) {
   }
 
   function renderQuotes() {
-    // If additional information is found, add it to the book object
     if (!quotesArray) {
-      // Return null if no matching book is found
       return null;
     }
     const renderedQuotes = Object.values(quotesArray).map((quote, index) => {
@@ -271,35 +257,29 @@ export default function BookDetails({ serverBook, serverContent }) {
   );
 }
 
-// Die getServerSideProps-Funktion wird für serverseitiges Rendering verwendet wenn die Daten in DataContext noch nicht vorhanden sind. Z.b. wenn die Seite über die URL geladen wird ist dies der Fall
 export async function getServerSideProps(context) {
-  // Wenn es sich um eine clientseitige Anfrage handelt oder wenn der DataContext bereits Buchdaten enthält, werden keine Daten gefetcht
   const { req, query } = context;
   if (!req || (query && query.hasDataContext === "true")) {
     return { props: { serverBook: null, serverContent: null } };
   }
 
-  // Bei einer serverseitigen Anfrage oder wenn DataContext nicht vorhanden ist, werden die Buchdaten anhand des Slugs aus der Datenbank geholt
   const slug = context.params.slug;
   const response = await fetch("/api/get/books");
   const bookData = await response.json();
   const index = bookData.findIndex((book) => book.slug === slug);
 
-  // Wenn das Buch nicht gefunden wurde, wird ein "notFound"-Status zurückgegeben
   if (index === -1) {
     return {
       notFound: true,
     };
   }
 
-  // Inhaltsdaten für das gefundene Buch aus der Datenbank abrufen
   const contentResponse = await fetch("/api/get/bookcontent");
   const contentData = await contentResponse.json();
   const filteredContent = contentData.filter(
     (item) => item.bookID === bookData[index].bookID
   );
 
-  // das gefundene Buch wird als serverBook-Prop und den gefilterten Inhalt als serverContent-Prop zurückgegeben
   return {
     props: {
       serverBook: bookData[index],
