@@ -51,10 +51,9 @@ export default function BookLibrary() {
     if (bookData && bookData.length > 0) {
       setIsLoading(false);
     }
-  }, [bookData]); //Fehlerbehandlung: sicherstellen dass die daten vorhanden sind beim laden durch die url
+  }, [bookData]);
 
   function renderBooksByGenre(filteredBookArray) {
-    //const filteredBookArray = filterBooksByGenre(bookData, "genre", filter);
     let renderedContent = [];
     for (let i = 0; i < filteredBookArray.length; i++) {
       renderedContent.push(
