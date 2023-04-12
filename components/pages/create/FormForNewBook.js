@@ -6,16 +6,13 @@ import { DataContext } from "@/contexts/dataContext.js";
 import addBook from "@/components/common/Data/addBook.js";
 
 import { genreData } from "@/public/data/genre.js";
-//neu
+
 const sharedStyles = css`
-  /*layout*/
   display: block;
   text-align: center;
-  /*dimension*/
   width: calc(100vw - 10px);
   margin: 10px 5px 0px 5px;
   padding: 7px;
-  /*style*/
   background-color: #03314b;
   border: none;
   border-bottom: solid 1px #fffefb;
@@ -23,7 +20,6 @@ const sharedStyles = css`
 `;
 
 const StyledForm = styled.form`
-  /*layout*/
   display: flex;
   flex-direction: column;
 `;
@@ -41,24 +37,19 @@ const StyledFileContainerField = styled.div`
 `;
 
 const StyledFileInput = styled.input`
-  /*layout*/
   display: none;
 `;
 
 const StyledFileButton = styled.button`
-  /*dimension*/
   width: 100%;
 `;
 
 const StyledSubmitButton = styled.button`
-  /*layout*/
   display: block;
   text-align: center;
-  /*dimension*/
   width: calc(100vw - 10px);
   margin: 30px 5px 0px 5px;
   padding: 7px;
-  /*style*/
   background-color: #03314b;
   border: none;
   border: solid 1px #fffefb;
