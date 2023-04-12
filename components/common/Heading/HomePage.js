@@ -5,22 +5,18 @@ import styled from "styled-components";
 import { MyContext } from "@/contexts/myContext.js";
 
 const StyledHeader = styled.header`
-  /*layout*/
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
-  /*dimension*/
   width: 100%;
   padding: 0 20px;
-  /*style*/
   background: none;
   font-size: 30px;
   border-bottom: 2px solid #03314b;
 `;
 
 const StyledImageContainer = styled.div`
-  /*layout*/
   position: absolute;
   bottom: -7px;
   left: 0;

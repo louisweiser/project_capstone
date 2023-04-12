@@ -3,19 +3,15 @@ import styled from "styled-components";
 import BackLibraryButton from "@/components/common/Link/BackTo.js";
 
 const StyledHeader = styled.header`
-  /*layout*/
   display: flex;
   justify-content: center;
   position: relative;
-  /*dimension*/
   width: 100%;
   padding: 3px;
-  /*style*/
   background-color: #03314b;
 `;
 
 const StyledContainer = styled.div`
-  /*layout*/
   position: absolute;
   left: 9px;
   top: 50%;

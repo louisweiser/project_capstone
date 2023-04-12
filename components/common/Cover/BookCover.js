@@ -5,13 +5,10 @@ import styled from "styled-components";
 import { DataContext } from "@/contexts/dataContext.js";
 
 const StyledImageContainer = styled.div`
-  /*layout*/
   overflow-y: hidden;
-  /*dimension*/
   width: ${({ relativewidth }) => relativewidth}px;
   height: ${({ height }) => height}px;
   flex-shrink: 0;
-  /*style*/
   border-radius: 8px;
 `;
 
@@ -30,7 +27,7 @@ export default function BookCover({ slug, height }) {
 
   if (!image[0]) {
     return <div>error</div>;
-  } //Error handling
+  }
 
   const relativewidth = Math.floor(image[0].relativefactor * height);
 

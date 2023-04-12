@@ -1,17 +1,14 @@
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  /*layout*/
   display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /*dimension*/
   width: auto;
   height: 30vh;
   margin-top: 175px;
   padding: 20px;
-  /*style*/
   background-color: #03314b;
   border-top: #032330 solid 2px;
   border-bottom: #032330 solid 2px;
