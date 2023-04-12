@@ -3,7 +3,6 @@ import { MyContext } from "@/contexts/myContext.js";
 import styled from "styled-components";
 
 import BackLibraryButton from "@/components/common/Link/BackTo.js";
-import { EditSVG, DeleteSVG } from "@/public/svgs/navigationbar.js";
 
 const StyledHeader = styled.header`
   /*layout*/
@@ -28,13 +27,6 @@ const StyledContainer = styled.div`
   width: calc(100% - 18px);
 `;
 
-const StyledButton = styled.button``;
-
-const StyledEditContainer = styled.div`
-  display: flex;
-  gap: 5px;
-`;
-
 export default function Header() {
   const { edit, setEdit } = useContext(MyContext);
 
@@ -46,16 +38,6 @@ export default function Header() {
     <StyledHeader>
       <StyledContainer>
         <BackLibraryButton target={"library"}></BackLibraryButton>
-        <StyledEditContainer>
-          {edit && (
-            <StyledButton>
-              <DeleteSVG></DeleteSVG>
-            </StyledButton>
-          )}
-          <StyledButton onClick={handleOnClick}>
-            <EditSVG></EditSVG>
-          </StyledButton>
-        </StyledEditContainer>
       </StyledContainer>
     </StyledHeader>
   );
