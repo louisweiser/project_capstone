@@ -20,11 +20,9 @@ const StyledContainer = styled.div`
 export default function DailyQuote() {
   const { contentData } = useContext(DataContext);
 
-  const getAllQuotes = contentData.reduce((accumulator, current) => {
-    return accumulator.concat(current.quotes);
-  }, []);
+  const allQuotesArray = contentData;
 
-  const allQuotesArray = getAllQuotes;
+  console.log("vorher", allQuotesArray);
 
   const [randomItem, setRandomItem] = useState(null);
   const [currentDay, setCurrentDay] = useState(null);
@@ -44,6 +42,10 @@ export default function DailyQuote() {
   };
 
   useEffect(() => {
+    if (!contentData || contentData.length === 0) {
+      return;
+    }
+
     const today = new Date().getDate();
     setCurrentDay(today);
 
@@ -63,11 +65,14 @@ export default function DailyQuote() {
       localStorage.setItem("randomItem", JSON.stringify(newItem));
       localStorage.setItem("savedDay", today);
     }
-  }, []);
+  }, [contentData]);
+
+  console.log("nachher", randomItem);
 
   return (
     <StyledContainer>
-      <h3>{randomItem?.text}</h3>
+      <h2>Headline</h2>
+      <h4>{randomItem?.text}</h4>
     </StyledContainer>
   );
 }
