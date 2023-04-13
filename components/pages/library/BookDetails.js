@@ -150,7 +150,7 @@ export default function BookDetails({ serverBook, serverContent }) {
 
     return (
       <>
-        <h3>Summary:</h3>
+        <h1>Summary</h1>
         <div>{renderedSummary}</div>
       </>
     );
@@ -167,7 +167,6 @@ export default function BookDetails({ serverBook, serverContent }) {
           <StyledContentEntryContainer key={index}>
             <h3>{story.title}</h3>
             <p>{story.text}</p>
-            <p>Seite: {story.page !== null ? story.page : "Nicht verfügbar"}</p>
           </StyledContentEntryContainer>
         );
       }
@@ -176,7 +175,7 @@ export default function BookDetails({ serverBook, serverContent }) {
 
     return (
       <div>
-        <h3>Stories:</h3>
+        <h1>Stories</h1>
 
         <div>{renderedStories}</div>
       </div>
@@ -192,7 +191,6 @@ export default function BookDetails({ serverBook, serverContent }) {
         return (
           <StyledContentEntryContainer key={index}>
             <p>{quote.text}</p>
-            <p>Seite: {quote.page !== null ? quote.page : "Nicht verfügbar"}</p>
           </StyledContentEntryContainer>
         );
       }
@@ -201,7 +199,7 @@ export default function BookDetails({ serverBook, serverContent }) {
 
     return (
       <div>
-        <h3>Quotes:</h3>
+        <h1>Quotes</h1>
         <div>{renderedQuotes}</div>
       </div>
     );
