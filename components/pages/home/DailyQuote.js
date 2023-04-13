@@ -22,8 +22,6 @@ export default function DailyQuote() {
 
   const allQuotesArray = contentData;
 
-  console.log("vorher", allQuotesArray);
-
   const [randomItem, setRandomItem] = useState(null);
   const [currentDay, setCurrentDay] = useState(null);
 
@@ -66,8 +64,6 @@ export default function DailyQuote() {
       localStorage.setItem("savedDay", today);
     }
   }, [contentData]);
-
-  console.log("nachher", randomItem);
 
   return (
     <StyledContainer>
