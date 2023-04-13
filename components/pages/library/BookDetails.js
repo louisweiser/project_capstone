@@ -56,6 +56,7 @@ const StyledContentContainer = styled.div`
 
 const StyledContentEntryContainer = styled.div`
   border-bottom: 2px solid white;
+  padding: 20px 0;
 `;
 
 const StyledImageContainer = styled.div`
