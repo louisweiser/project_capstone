@@ -20,7 +20,11 @@ const StyledContainer = styled.div`
 export default function DailyQuote() {
   const { contentData } = useContext(DataContext);
 
-  const allQuotesArray = contentData;
+  const getAllQuotes = contentData.reduce((accumulator, current) => {
+    return accumulator.concat(current.quotes);
+  }, []);
+
+  const allQuotesArray = getAllQuotes;
 
   const [randomItem, setRandomItem] = useState(null);
   const [currentDay, setCurrentDay] = useState(null);
