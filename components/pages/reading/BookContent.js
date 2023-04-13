@@ -40,6 +40,10 @@ export default function BookContent() {
     return accumulator.concat(current.quotes);
   }, []);
 
+  const mergeArrays = (...arrays) => {
+    return arrays.flat();
+  };
+
   const allStoriesArray = getAllStories;
   const allQuotesArray = getAllQuotes;
 
@@ -84,10 +88,6 @@ export default function BookContent() {
     });
     return allRenderedQuotes;
   }
-
-  const mergeArrays = (...arrays) => {
-    return arrays.flat();
-  };
 
   function filterBySearchTerm(arr, searchTerm) {
     return arr.filter((obj) => {
