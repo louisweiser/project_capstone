@@ -71,7 +71,6 @@ export default function DailyQuote() {
 
   return (
     <StyledContainer>
-      <h2>Headline</h2>
       <h4>{randomItem?.text}</h4>
     </StyledContainer>
   );
