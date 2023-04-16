@@ -3,7 +3,7 @@ import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
 import CoverFromData from "@/components/common/Cover/BookCover.js";
-import searchBook from "@/components/common/Search";
+import searchBooks from "@/components/common/Search";
 
 import { DataContext } from "@/contexts/dataContext.js";
 
@@ -99,7 +99,7 @@ export default function SearchBar() {
   const [searchIsActive, setSearchIsActive] = useState(false);
   const { bookData } = useContext(DataContext);
 
-  const searchResults = searchBook(searchTerm, bookData);
+  const searchResults = searchBooks(searchTerm, bookData);
 
   const handleBackClick = () => {
     setSearchIsActive(false);
