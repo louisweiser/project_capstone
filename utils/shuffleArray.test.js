@@ -1,4 +1,3 @@
-import { render, screen } from "@testing-library/react";
 import shuffleArray from "./shuffleArray";
 
 describe("shuffleArray", () => {
@@ -25,9 +24,6 @@ describe("shuffleArray", () => {
     const testArray = [1, 2, 3, 4, 5];
     const shuffled = shuffleArray(testArray);
 
-    // The shuffle function uses randomness, so there's a very small chance
-    // that the resulting array is in the same order as the original array.
-    // If that happens, re-run the test.
     if (JSON.stringify(shuffled) === JSON.stringify(testArray)) {
       console.warn(
         "Shuffled array is the same as the original array. Re-run the test."
