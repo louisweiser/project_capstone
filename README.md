@@ -1,38 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BookLog App
 
-## Getting Started
+> Digital journeyman piece as final project for neuefische web dev bootcamp
 
-First, run the development server:
+This is a simple, yet powerful web application built with Next.js to help you organize your books and keep track of quotes or other interesting entries related to them. By using this app, you can efficiently manage your book collection and easily access your favorite passages, insights, or notes anytime.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![Image](https://user-images.githubusercontent.com/122813337/232464961-fea41ebf-cdc7-4186-8813-ff18dee908f6.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Add, edit, and delete books from your collection
+- Save and manage quotes or notes related to each book
+- Search for books and quotes using filters and keywords
+- Responsive design, mobile and desktop friendly
+- User authentication and authorization
+- Getting Started
+- These instructions will guide you through the setup process to get the application up and running on your local machine for development and testing purposes.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Tech Stack
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- React
+- Next.js
+- React Testing Library
+- Jest
+- Styled Components
+- Node.js
+- Mongoose
+- MongoDB Atlas
+- useSWR
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project setup
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repository to your local machine
+2. Navigate to the project directory
+3. Install the project dependencies
+- `npm install`
+4. Create a .env.local file in the project root directory and set up the required environment variables.
+- `MONGODB_URI=mongodb+srv://louisw:D1ujPvhk2lWqANAm@louisw.5hrnqqj.mongodb.net/bookLog`
+5. Run the development server
+- `npm run dev`
